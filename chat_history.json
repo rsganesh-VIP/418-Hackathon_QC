@@ -1,0 +1,6 @@
+@echo off
+cd /d "%~dp0"
+start "Chat Server" cmd /k python server.py
+timeout /t 3 /nobreak >nul
+start chrome http://localhost:8000
+exit
